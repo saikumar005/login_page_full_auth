@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>dummy</title>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome</h1>
+            <form id="form" onsubmit="return validateUserOnSubmit()">
+                <h1>Register Here</h1>
+                <div class="input-control">
+                    <input type="text" id="uname" onblur="validateForm(event)" onkeyup="validateForm(event)" placeholder="Enter User Name">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input type="text" id="number" onblur="validateForm(event)" onkeyup="validateForm(event)" placeholder="Enter Mobile number">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input type="text" id="email" onblur="validateForm(event)" onkeyup="validateForm(event)" placeholder="Enter E-mail Adress">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <select name="state" id="state" onblur="validateForm(event)" onchange="validateForm(event)">
+                        <option value="" selected></option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <button type="submit" id="submit" >submit</button>
+            </form>
+        </div>
+    </body>
+</html>
