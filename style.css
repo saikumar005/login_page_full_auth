@@ -113,3 +113,21 @@ input:focus{
     font-weight: bold;
     height: 12px;
 }
+.input-control .gender_select{
+    width:200px;
+    margin-top:-20px;
+    display:flex;
+    flex-direction: row;
+}
+.input-control .language_select{
+    margin-top: -20px;
+    width:200px;
+    display:flex;
+    flex-direction: row;
+    }
+.input-control h4{
+    margin-top:-10px;
+}
+#address{
+    width:200px;
+}

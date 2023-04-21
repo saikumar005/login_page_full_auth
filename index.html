@@ -10,7 +10,7 @@
             <form id="form" onsubmit="return validateUserOnSubmit()">
                 <h1>Register Here</h1>
                 <div class="input-control">
-                    <input type="text" id="uname" onblur="validateForm(event)" onkeyup="validateForm(event)" placeholder="Enter User Name">
+                    <input type="text" id="uname" onblur="validateForm(event)" onkeyup="validateForm(event)" placeholder="Enter Name">
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
@@ -30,6 +30,28 @@
                         <option value="Chhattisgarh">Chhattisgarh</option>
                         <option value="Goa">Goa</option>
                     </select>
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <h4>select Your gender</h4>
+                    <div class="gender_select">
+                        <input type="radio" name="gender" class="gender" value="male"><label for="gender">male</label>
+                        <input type="radio"name="gender" class="gender" value="female"><label for="gender">female</label>
+                        <input type="radio" name="gender" class="gender" value="others"><label for="gender">others</label>
+                    </div>
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <h4>select Languages</h4>
+                    <div class="language_select">
+                        <input type="checkbox" name="language" class="language" value="English"><label for="language">English</label>
+                        <input type="checkbox" name="language" class="language" value="telugu"><label for="language">Telugu</label>
+                        <input type="checkbox" name="language" class="language" value="tamil"><label for="language">Tamil</label>
+                    </div>
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter Your Address"></textarea>
                     <div class="error"></div>
                 </div>
                 <button type="submit" id="submit" >submit</button>
