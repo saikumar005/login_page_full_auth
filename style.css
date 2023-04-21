@@ -113,20 +113,20 @@ input:focus{
     font-weight: bold;
     height: 12px;
 }
-.input-control .gender_select{
+.input-control #gender_select{
     width:200px;
-    margin-top:-20px;
+    margin-top:-15px;
     display:flex;
     flex-direction: row;
 }
-.input-control .language_select{
-    margin-top: -20px;
+.input-control #language_select{
+    margin-top:-15px;
     width:200px;
     display:flex;
     flex-direction: row;
     }
 .input-control h4{
-    margin-top:-10px;
+    margin-top:-5px;
 }
 #address{
     width:200px;

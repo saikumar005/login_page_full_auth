@@ -117,6 +117,52 @@ function validateState(e)
     }
 }
 
+function validateAddress(e)
+{
+    const value=e.target.value;
+    const element=document.getElementById("address");
+    if(value=="")
+    {
+        errorMessage(element,"please enter your address");
+    }
+    else
+    {
+        successMessage(element);
+    }
+}
+
+
+function validateRemaining(genderValue,gender,languageValue,language,addressValue,address)
+{
+    if(genderValue==null)
+    {
+        errorMessage(gender,"please select gender");
+        return false;
+    }
+    else
+    {
+        successMessage(gender);
+    }
+    if(languageValue==null)
+    {
+        errorMessage(language,"please select atleast one language");
+        return false;
+    }
+    else
+    {
+        successMessage(language);
+    }
+    if(addressValue=="")
+    {
+        errorMessage(address,"please enter your address");
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
 function validateUserOnSubmit()
 {
     const uname=document.getElementById("uname");
@@ -127,6 +173,12 @@ function validateUserOnSubmit()
     const numberValue=number.value;
     const state=document.getElementById("state");
     const stateValue=state.value;
+    const gender=document.getElementById("gender_select");
+    const genderValue=document.querySelector('input[name="gender"]:checked');
+    const language=document.getElementById("language_select");
+    const languageValue=document.querySelector('input[name="language"]:checked');
+    const address=document.getElementById("address");
+    const addressValue=address.value;
     if (unameValue=="")
     {
         errorMessage(uname,"user name should not be empty.");
@@ -169,6 +221,10 @@ function validateUserOnSubmit()
     else if(stateValue=="")
     {
         errorMessage(state,"please select state");
+        return false;
+    }
+    else if(!validateRemaining(genderValue,gender,languageValue,language,addressValue,address))
+    {
         return false;
     }
     else{
